@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - Campus Event Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<section class="sub-header">
+    <nav>
+        <a href="Index.html" class="logo-link">
+            <img src="Images/zewaillogo.png" alt="Zewail City Campus Event Guide">
+        </a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa-solid fa-xmark" onclick="hideMenu()" aria-label="Close navigation"></i>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="event-details.html">Event Details</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="registration.html" aria-current="page">Registration</a></li>
+            </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()" aria-label="Open navigation"></i>
+    </nav>
+    <h1>Event Registration</h1>
+</section>
+
+<main>
+    <section class="form-section">
+        <div class="form-box">
+            <h2>Save your place</h2>
+            <p>Complete the form to register your interest in a campus event.</p>
+            <form id="registrationForm">
+                <label for="fullName">Full name</label>
+                <input id="fullName" name="fullName" type="text" autocomplete="name" required>
+
+                <label for="email">Student email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+
+                <label for="studentId">Student ID</label>
+                <input id="studentId" name="studentId" type="text" required>
+
+                <label for="event">Choose an event</label>
+                <select id="event" name="event" required>
+                    <option value="" selected disabled>Select an event</option>
+                    <option value="science-week">Zewail City Science Week</option>
+                    <option value="hackathon">ZC Hackathon &amp; Tech Day</option>
+                    <option value="employment-fair">Annual Employment Fair</option>
+                </select>
+
+                <label for="notes">Notes (optional)</label>
+                <textarea id="notes" name="notes" rows="4"></textarea>
+
+                <button class="hero-btn" type="submit">Check registration</button>
+                <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="footer-contact">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h3>Zewail City Campus</h3>
+            <p>Zewail City of Science, Technology and Innovation</p>
+            <p>October Gardens, 6th of October City, Giza, Egypt</p>
+        </div>
+        <div class="footer-col">
+            <h3>Contact Info</h3>
+            <p><i class="fa-solid fa-phone"></i> +20 2 3854 0400</p>
+            <p><i class="fa-solid fa-envelope"></i> info@zewailcity.edu.eg</p>
+        </div>
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <p><a href="event.html">Events</a></p>
+            <p><a href="schedule.html">Schedule</a></p>
+            <p><a href="registration.html" aria-current="page">Registration</a></p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Zewail City Campus Event Guide. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    var navlinks = document.getElementById("navLinks");
+    function showMenu(){
+        navlinks.style.left = "0";
+    }
+    function hideMenu(){
+        navlinks.style.left = "-200px";
+    }
+
+    document.getElementById("registrationForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+        document.getElementById("formStatus").textContent =
+            "Thank you for registering! We will contact you with further details.";
+    });
+
+    var requestedEvent = new URLSearchParams(window.location.search).get("event");
+    var eventSelect = document.getElementById("event");
+    if (requestedEvent && Array.from(eventSelect.options).some(function (option) {
+        return option.value === requestedEvent;
+    })) {
+        eventSelect.value = requestedEvent;
+    }
+</script>
+</body>
+</html>

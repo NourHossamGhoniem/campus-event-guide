@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule - Campus Event Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<section class="sub-header">
+    <nav>
+        <a href="Index.html" class="logo-link">
+            <img src="Images/zewaillogo.png" alt="Zewail City Campus Event Guide">
+        </a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="event-details.html">Event Details</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="registration.html">Registration</a></li>
+            </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1>Event Schedule</h1>
+</section>
+
+<section class="schedule-section">
+    <div class="table-box">
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Session</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>09:00 AM</td>
+                    <td>Opening Ceremony & Welcome Speech</td>
+                    <td>The Satdioum</td>
+                </tr>
+                <tr>
+                    <td>10:30 AM</td>
+                    <td>Student Science Exhibition & Demos</td>
+                    <td>Infront Gate A</td>
+                </tr>
+                <tr>
+                    <td>01:00 PM</td>
+                    <td>Lunch & Networking Break</td>
+                    <td>Student Lounge</td>
+                </tr>
+                <tr>
+                    <td>02:30 PM</td>
+                    <td>Robotics & AI Competitions</td>
+                    <td>Engineering Labs S032 Zone E</td>
+                </tr>
+                <tr>
+                    <td>04:30 PM</td>
+                    <td>Closing & Awards Distribution</td>
+                    <td>F004 Zone B</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<footer class="footer-contact">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h3>Zewail City Campus</h3>
+            <p>Zewail City of Science, Technology and Innovation</p>
+            <p>October Gardens, 6th of October City, Giza, Egypt</p>
+        </div>
+        <div class="footer-col">
+            <h3>Contact Info</h3>
+            <p><i class="fa-solid fa-phone"></i> +20 2 3854 0400</p>
+            <p><i class="fa-solid fa-envelope"></i> info@zewailcity.edu.eg</p>
+        </div>
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <p><a href="event.html">Events</a></p>
+            <p><a href="schedule.html">Schedule</a></p>
+            <p><a href="registration.html">Registration</a></p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Zewail City Campus Event Guide. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    var navlinks = document.getElementById("navLinks");
+    function showMenu(){
+        navlinks.style.left="0";
+    }
+    function hideMenu(){
+        navlinks.style.left="-200px";
+    }
+</script>
+</body>
+</html>

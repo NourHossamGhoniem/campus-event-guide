@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Campus Event Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<section class="sub-header">
+    <nav>
+        <a href="Index.html" class="logo-link">
+            <img src="Images/zewaillogo.png" alt="Zewail City Campus Event Guide">
+        </a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="event-details.html">Event Details</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="registration.html">Registration</a></li>
+            </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1>Campus Events</h1>
+</section>
+
+<section class="campus-events">
+    <h1>All Upcoming Events</h1>
+    <p>Explore all the workshops, fairs, and academic activities on campus.</p>
+
+    <div class="row">
+        <div class="event-col">
+            <div class="img-box">
+                <img src="Images/posters.jpg" alt="Student event posters on a campus notice board">
+            </div>
+            <h3>Zewail City Science Week</h3>
+            <p>Annual festival of science exhibitions, live experiments, and scientific discussions open to students.</p>
+            <a href="event-details.html#science-week" class="hero-btn">View Details</a>
+        </div>
+
+        <div class="event-col">
+            <div class="img-box">
+                <img src="Images/hack.jpg" alt="Students taking part in a campus activity">
+            </div>
+            <h3>ZC Hackathon 2026</h3>
+            <p>Annual software engineering and robotics sprint where teams solve real campus problems.</p>
+            <a href="event-details.html#hackathon" class="hero-btn">View Details</a>
+        </div>
+
+        <div class="event-col">
+            <div class="img-box">
+                <img src="Images/campus kinda cute.jpg" alt="Campus building and outdoor gathering area">
+            </div>
+            <h3>Career & Employment Day</h3>
+            <p>Top companies visit to recruit engineering and science students for internships and full-time jobs.</p>
+            <a href="event-details.html#employment-fair" class="hero-btn">View Details</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-contact">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h3>Zewail City Campus</h3>
+            <p>Zewail City of Science, Technology and Innovation</p>
+            <p>October Gardens, 6th of October City, Giza, Egypt</p>
+        </div>
+        <div class="footer-col">
+            <h3>Contact Info</h3>
+            <p><i class="fa-solid fa-phone"></i> +20 2 3854 0400</p>
+            <p><i class="fa-solid fa-envelope"></i> info@zewailcity.edu.eg</p>
+        </div>
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <p><a href="event.html">Events</a></p>
+            <p><a href="schedule.html">Schedule</a></p>
+            <p><a href="registration.html">Registration</a></p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Zewail City Campus Event Guide. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    var navlinks = document.getElementById("navLinks");
+    function showMenu(){
+        navlinks.style.left="0";
+    }
+    function hideMenu(){
+        navlinks.style.left="-200px";
+    }
+</script>
+</body>
+</html>

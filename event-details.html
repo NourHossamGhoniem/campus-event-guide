@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details - Campus Event Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<section class="sub-header">
+    <nav>
+        <a href="Index.html" class="logo-link">
+            <img src="Images/zewaillogo.png" alt="Zewail City Campus Event Guide">
+        </a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="event-details.html">Event Details</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="registration.html">Registration</a></li>
+            </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1>Event Details</h1>
+</section>
+
+<section class="details-section">
+    <article class="details-box" id="science-week">
+        <div class="img-box details-img">
+            <img src="Images/posters.jpg" alt="Student event posters on a campus notice board">
+        </div>
+        <h2>Zewail City Science Week</h2>
+        <p class="tagline">Explore innovations, listen to guest lectures, and visit student project displays.</p>
+        
+        <div class="info-list">
+            <p><i class="fa-solid fa-calendar"></i> <strong>Date:</strong> November 10 - November 12, 2026</p>
+            <p><i class="fa-solid fa-clock"></i> <strong>Time:</strong> 10:00 AM - 4:00 PM</p>
+            <p><i class="fa-solid fa-location-dot"></i> <strong>Location:</strong> Main Campus Hall & Academic Building</p>
+        </div>
+
+        <p class="desc">
+            Science Week is the biggest annual celebration on campus. It provides a platform for undergraduates, faculty, and school students to share knowledge through live demos, research booths, and engineering competitions.
+        </p>
+
+        <a href="registration.html?event=science-week#registrationForm" class="hero-btn">Register Now</a>
+    </article>
+
+    <article class="details-box" id="hackathon">
+        <div class="img-box details-img">
+            <img src="Images/hack.jpg" alt="Students taking part in a campus activity">
+        </div>
+        <h2>ZC Hackathon &amp; Tech Day</h2>
+        <p class="tagline">A student-led event for coding, AI challenges, and robotics demonstrations.</p>
+        <p class="desc">Teams collaborate on software and engineering challenges, then share their projects with the campus community. Event time and venue will be announced.</p>
+        <a href="registration.html?event=hackathon#registrationForm" class="hero-btn">Register Now</a>
+    </article>
+
+    <article class="details-box" id="employment-fair">
+        <div class="img-box details-img">
+            <img src="Images/campus kinda cute.jpg" alt="Campus building and outdoor gathering area">
+        </div>
+        <h2>Annual Employment Fair</h2>
+        <p class="tagline">Meet regional employers and learn about internships and career opportunities.</p>
+        <p class="desc">The fair connects Zewail City students and alumni with organizations across engineering and technology. Event time and venue will be announced.</p>
+        <a href="registration.html?event=employment-fair#registrationForm" class="hero-btn">Register Now</a>
+    </article>
+</section>
+
+<footer class="footer-contact">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h3>Zewail City Campus</h3>
+            <p>Zewail City of Science, Technology and Innovation</p>
+            <p>October Gardens, 6th of October City, Giza, Egypt</p>
+        </div>
+        <div class="footer-col">
+            <h3>Contact Info</h3>
+            <p><i class="fa-solid fa-phone"></i> +20 2 3854 0400</p>
+            <p><i class="fa-solid fa-envelope"></i> info@zewailcity.edu.eg</p>
+        </div>
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <p><a href="event.html">Events</a></p>
+            <p><a href="schedule.html">Schedule</a></p>
+            <p><a href="registration.html">Registration</a></p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Zewail City Campus Event Guide. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    var navlinks = document.getElementById("navLinks");
+    function showMenu(){
+        navlinks.style.left="0";
+    }
+    function hideMenu(){
+        navlinks.style.left="-200px";
+    }
+</script>
+</body>
+</html>
